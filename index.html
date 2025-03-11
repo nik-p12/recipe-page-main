@@ -68,6 +68,7 @@
       border-radius: 8px;
       background: var(--color-white);
       gap: 10px;
+      flex-shrink: 2;
     }
     img{
       width: 100%;
@@ -101,10 +102,18 @@
       color: var(--color-Rose-800);
       font-weight: var(--font-weight-700);
     }
-    h1{
+    .title{
+      display: flex;
+      flex-shrink: 2;
       color: black;
       align-self: flex-start;
-      font-weight: var(--font-weight-600);
+      font-weight: var(--font-weight-700);
+      font-size: 40px;
+    }
+    .subtitle{
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 2;
     }
     h2{
       color: var(--color-Brown-800);
@@ -127,18 +136,39 @@
       color: var(--color-Brown-800);
       font-weight: var(--font-weight-700);
     }
+    ol{
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 2;
+    }
+    @media (max-width: 480px){
+      body{
+        width: 100%;
+      }
+      .container{
+        width: 375px;
+        margin-top: 0px;
+        padding-left: 30px;
+        height: auto;
+      }
+      img{
+        border-radius: 0px;
+        margin: 0px;
+        width: 415px;
+        margin-top: -20px;
+      }
+      table{
+        width: 200px;
+      }
+    }
   </style>
 </head>
 <body>
  <div class="container">
   <img src="./assets/images/image-omelette.jpeg" alt="omelette image">
-  <h1>
-    Simple Omelette Recipe
-  </h1>
-  <p>
-    An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
-  to perfection, optionally filled with your choice of cheese, vegetables, or meats.
-  </p>
+  <div class="title">Simple Omelette Recipe</div>
+  <div class="subtitle">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+  to perfection, optionally filled with your choice of cheese, vegetables, or meats.</div>
   <div class="preparation-time">
     <h3>Preparation time</h3>
     <ul>
@@ -174,7 +204,7 @@
   </ol>
   <hr>
   <h2>Nutrition</h2>
-  <p>The table below shows nutritional values per serving without the additional fillings.</p>
+  <div class="subtitle">The table below shows nutritional values per serving without the additional fillings.</div>
   <table>
     <tbody>
       <tr>
